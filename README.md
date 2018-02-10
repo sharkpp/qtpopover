@@ -16,14 +16,17 @@
 ### 1)ソースを取得
 
 ```console
-# mkdir -p libs
 # git submodule add git@github.com:sharkpp/qtpopover.git libs/qtpopover
 # git submodule update
 ```
 
 ### 2a)ソースを取り込む
 
-アプリケーションの `.pro` に追加
+#### 2a.1)プロジェクトファイル(`.pro`)を変更
+
+アプリケーションの `.pro` を変更する。
+
+変更例
 
 ```diff
 + # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -38,13 +41,15 @@
 
 ### 2b)ライブラリを取り込む
 
-```console
-# mkdir -p libs
-# git submodule add git@github.com:sharkpp/qtpopover.git libs/qtpopover
-# git submodule update
-```
+#### 2b.1)ライブラリをビルド
 
-sources/popover.pro をビルド
+`./libs/qtpopover/popover.pro` を `Qt Creator` で開きビルドする。
+
+#### 2b.2)プロジェクトファイル(`.pro`)を変更
+
+アプリケーションの `.pro` を変更する。
+
+変更例
 
 ```diff
 + # You can also select to disable deprecated APIs only up to a certain version of Qt.
